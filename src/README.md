@@ -49,9 +49,8 @@ Please follow the [installation procedure](#installation--usage) and then run th
 import time
 import openapi_client
 from pprint import pprint
-from openapi_client.api import history_api
-from openapi_client.model.end_of_day_price_history import EndOfDayPriceHistory
-from openapi_client.model.ohvcv_prices import OHVCVPrices
+from openapi_client.api import company_valuation_api
+from openapi_client.model.company_profile import CompanyProfile
 # Defining the host is optional and defaults to https://financialmodelingprep.com/api/v3
 # See configuration.py for a list of all supported configuration parameters.
 configuration = openapi_client.Configuration(
@@ -73,17 +72,15 @@ configuration.api_key['api_key'] = 'YOUR_API_KEY'
 # Enter a context with an instance of the API client
 with openapi_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = history_api.HistoryApi(api_client)
+    api_instance = company_valuation_api.CompanyValuationApi(api_client)
     symbol = "symbol_example" # str | Name of ticker
-_from = dateutil_parser('1970-01-01').date() # date | From date (optional)
-to = dateutil_parser('1970-01-01').date() # date | To date (optional)
 
     try:
-        # Get Ticker price
-        api_response = api_instance.daily_prices(symbol, _from=_from, to=to)
+        # Get the Company profile
+        api_response = api_instance.profile(symbol)
         pprint(api_response)
     except openapi_client.ApiException as e:
-        print("Exception when calling HistoryApi->daily_prices: %s\n" % e)
+        print("Exception when calling CompanyValuationApi->profile: %s\n" % e)
 ```
 
 ## Documentation for API Endpoints
@@ -92,6 +89,7 @@ All URIs are relative to *https://financialmodelingprep.com/api/v3*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
+*CompanyValuationApi* | [**profile**](docs/CompanyValuationApi.md#profile) | **GET** /profile/{symbol} | Get the Company profile
 *HistoryApi* | [**daily_prices**](docs/HistoryApi.md#daily_prices) | **GET** /historical-price-full/{symbol} | Get Ticker price
 *HistoryApi* | [**intra_day_prices**](docs/HistoryApi.md#intra_day_prices) | **GET** /historical-chart/{resolution}/{symbol} | Get Ticker price
 *ListApi* | [**list_symbols**](docs/ListApi.md#list_symbols) | **GET** /{type}/list | Get list of symbols
@@ -99,6 +97,7 @@ Class | Method | HTTP request | Description
 
 ## Documentation For Models
 
+ - [CompanyProfile](docs/CompanyProfile.md)
  - [EndOfDayPrice](docs/EndOfDayPrice.md)
  - [EndOfDayPriceHistory](docs/EndOfDayPriceHistory.md)
  - [OHVCVPrice](docs/OHVCVPrice.md)

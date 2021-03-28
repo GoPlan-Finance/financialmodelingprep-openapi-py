@@ -9,6 +9,7 @@
 # import sys
 # sys.setrecursionlimit(n)
 
+from openapi_client.model.company_profile import CompanyProfile
 from openapi_client.model.end_of_day_price import EndOfDayPrice
 from openapi_client.model.end_of_day_price_history import EndOfDayPriceHistory
 from openapi_client.model.ohvcv_price import OHVCVPrice
