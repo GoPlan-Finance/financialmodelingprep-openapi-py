@@ -1,6 +1,5 @@
 .gitignore
 .gitlab-ci.yml
-.openapi-generator-ignore
 .travis.yml
 README.md
 docs/EndOfDayPrice.md
@@ -34,11 +33,4 @@ setup.cfg
 setup.py
 test-requirements.txt
 test/__init__.py
-test/test_end_of_day_price.py
-test/test_end_of_day_price_history.py
-test/test_history_api.py
-test/test_list_api.py
-test/test_ohvcv_price.py
-test/test_ohvcv_prices.py
-test/test_symbol.py
 tox.ini

@@ -44,6 +44,7 @@ class ListApi(object):
         ):
             """Get list of symbols  # noqa: E501
 
+              # noqa: E501
             This method makes a synchronous HTTP request by default. To make an
             asynchronous HTTP request, please pass async_req=True
 

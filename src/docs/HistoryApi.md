@@ -13,6 +13,8 @@ Method | HTTP request | Description
 
 Get Ticker price
 
+
+
 ### Example
 
 * Api Key Authentication (api_key):
@@ -44,8 +46,8 @@ with openapi_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = history_api.HistoryApi(api_client)
     symbol = "symbol_example" # str | Name of ticker
-    _from =  # date | From date (optional)
-    to =  # date | To date (optional)
+    _from = dateutil_parser('1970-01-01').date() # date | From date (optional)
+    to = dateutil_parser('1970-01-01').date() # date | To date (optional)
 
     # example passing only required values which don't have defaults set
     try:
@@ -100,6 +102,8 @@ Name | Type | Description  | Notes
 > OHVCVPrices intra_day_prices(symbol, resolution)
 
 Get Ticker price
+
+
 
 ### Example
 

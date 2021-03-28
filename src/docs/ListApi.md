@@ -12,6 +12,8 @@ Method | HTTP request | Description
 
 Get list of symbols
 
+
+
 ### Example
 
 * Api Key Authentication (api_key):
