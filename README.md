@@ -1,12 +1,17 @@
 # Financial Modeling Prep Python API Client
 
+
 ```bash
  
 ```
 
 # Status
 
+This repository only contains generated code. 
+
 ### [Click Here to see the current status and avalable endpoints](https://github.com/GoPlan-Finance/financialmodelingprep-openapi)
+
+
 
 # Issues & PRs 
 
