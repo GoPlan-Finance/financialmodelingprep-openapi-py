@@ -3,6 +3,7 @@
 .travis.yml
 README.md
 docs/CompanyProfile.md
+docs/CompanyQuote.md
 docs/CompanyValuationApi.md
 docs/EndOfDayPrice.md
 docs/EndOfDayPriceHistory.md
@@ -23,6 +24,7 @@ openapi_client/configuration.py
 openapi_client/exceptions.py
 openapi_client/model/__init__.py
 openapi_client/model/company_profile.py
+openapi_client/model/company_quote.py
 openapi_client/model/end_of_day_price.py
 openapi_client/model/end_of_day_price_history.py
 openapi_client/model/ohvcv_price.py

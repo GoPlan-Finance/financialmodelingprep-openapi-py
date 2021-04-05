@@ -51,6 +51,7 @@ import openapi_client
 from pprint import pprint
 from openapi_client.api import company_valuation_api
 from openapi_client.model.company_profile import CompanyProfile
+from openapi_client.model.company_quote import CompanyQuote
 # Defining the host is optional and defaults to https://financialmodelingprep.com/api/v3
 # See configuration.py for a list of all supported configuration parameters.
 configuration = openapi_client.Configuration(
@@ -90,6 +91,7 @@ All URIs are relative to *https://financialmodelingprep.com/api/v3*
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
 *CompanyValuationApi* | [**profile**](docs/CompanyValuationApi.md#profile) | **GET** /profile/{symbol} | Get the Company profile
+*CompanyValuationApi* | [**quote**](docs/CompanyValuationApi.md#quote) | **GET** /quote/{symbol} | Get the Company Quote
 *HistoryApi* | [**daily_prices**](docs/HistoryApi.md#daily_prices) | **GET** /historical-price-full/{symbol} | Get Ticker price
 *HistoryApi* | [**intra_day_prices**](docs/HistoryApi.md#intra_day_prices) | **GET** /historical-chart/{resolution}/{symbol} | Get Ticker price
 *ListApi* | [**list_symbols**](docs/ListApi.md#list_symbols) | **GET** /{type}/list | Get list of symbols
@@ -98,6 +100,7 @@ Class | Method | HTTP request | Description
 ## Documentation For Models
 
  - [CompanyProfile](docs/CompanyProfile.md)
+ - [CompanyQuote](docs/CompanyQuote.md)
  - [EndOfDayPrice](docs/EndOfDayPrice.md)
  - [EndOfDayPriceHistory](docs/EndOfDayPriceHistory.md)
  - [OHVCVPrice](docs/OHVCVPrice.md)
